@@ -1,5 +1,7 @@
 
 Cloudant Offline-first Patterns - Part 1
+
+Note: view raw document source for comments.
 ============
 
 Offline-first applications provide a better, faster user experience — both offline and online — by storing and accessing data locally and then synchronizing this data with the cloud when an Internet connection is available.  
@@ -57,7 +59,7 @@ With the database per user pattern, cross database queries could be implemented 
 
 ![single_db_per_user_with_master](https://github.com/snowch/draft-blog-cloudant-offline-first-patterns/blob/master/single_db_per_user_with_master.png)
 
-Note that similar to the issue with the number of active databases, continuous replications also place a burden on the cluster and there will be a limit to the number of continuous replications.  There is an alternative to having continious replications by developing a custom service.  See the section "Replacing continuous replications with _db_updates watcher" for more information.
+Note that similar to the issue with the number of active databases, continuous replications also place a burden on the cluster and there will be a limit to the number of continuous replications.  There is an alternative to having continous replications by developing a custom service.  See the section "Replacing continuous replications with _db_updates watcher" in part 2 for more information.
 
 The filtered replication pattern has a single database on Cloudant, so natively supports querying all of the data.
 
@@ -71,9 +73,11 @@ In the database per user pattern where you do not have a master database, you co
 - inserts the document(s) into the target user's database
 - deletes the document(s) from the current user's database.
 
-If you are using the database per user pattern with a master database, and making the assumption that the backend administrator will allocate a task from one user to another by making changes in the master database this process gets considerably more complex.  One approach is described in detail in the section "Database per user pattern - moving data using document state".
+<start-comment-marker>If you are using the database per user pattern with a master database, and making the assumption that the backend administrator will allocate a task from one user to another by making changes in the master database this process gets considerably more complex.  One approach is described in detail in the section "Database per user pattern - moving data using document state".
 
-The filtered replication pattern has similar complexity as the database per user pattern with a master database for moving documents between users.  One approach is described in detail in the section "Database per user - moving data using document state".
+The filtered replication pattern has similar complexity as the database per user pattern with a master database for moving documents between users.  One approach is described in detail in the section "Database per user - moving data using document state".<end-comment-marker>
+
+[comment]: # (This seems like a long-winded redirect to another section.)
 
 ## Sync speed
 
