@@ -1,8 +1,8 @@
 
 Cloudant Offline-first Patterns - Part 1
-
-Note: view raw document source for comments.
 ============
+
+*Note: view the raw document source for review comments.*
 
 Offline-first applications provide a better, faster user experience — both offline and online — by storing and accessing data locally and then synchronizing this data with the cloud when an Internet connection is available.  
 
