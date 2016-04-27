@@ -35,9 +35,7 @@ The database per user pattern allows you to create a unique database on Cloudant
 
 <start-comment-marker>In the filtered replication pattern, each user has access to a shared database on Cloudant and can access all data in that database<end-comment-marker>.  If more granular access control is required, a custom proxy service will need to be implemented that intercepts all calls to Cloudant and performs custom authorisation.
 
-[comment]: <> (
-Consider being more explicit – even if only data relevant to each user is sync’d to a device, they will require read and write permissions across the whole database for the sync to work.
-)
+[comment]: <> (Consider being more explicit – even if only data relevant to each user is sync’d to a device, they will require read and write permissions across the whole database for the sync to work.)
 
 ## Number of active users
 
