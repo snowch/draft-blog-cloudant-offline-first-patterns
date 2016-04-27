@@ -4,6 +4,8 @@ Cloudant Offline-first Patterns - Part 1
 
 *Note: view the raw document source for review comments.*
 
+---
+
 Offline-first applications provide a better, faster user experience — both offline and online — by storing and accessing data locally and then synchronizing this data with the cloud when an Internet connection is available.  
 
 As an app developer, it’s tempting to let your mobile backend handle all of your data access. This is a clean and simple architecture, with less code to write. The problem is that networks are unreliable. When the network doesn’t work, neither does your app — and a broken app means unhappy, frustrated users.
@@ -98,5 +100,5 @@ The filtered replication patterns uses a master database from which all user dat
 | Movement of data between user databases	| Can be complex depending on the use case.	Can be complex depending on the use case.
 | Sync speed                              |	Initial and subsequent replications are usually quick.	| Initial replication may be slow if the master database is large.  Subsequent replications may be slow if their are lots of changes in the master database. |
 
-See [part2](./draft_part2.md) for further considerations.
+See [part 2](./draft_part2.md) for further considerations.
 
