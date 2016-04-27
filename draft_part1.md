@@ -75,9 +75,9 @@ In the database per user pattern where you do not have a master database, you co
 - inserts the document(s) into the target user's database
 - deletes the document(s) from the current user's database.
 
-<start-comment-marker>If you are using the database per user pattern with a master database, and making the assumption that the backend administrator will allocate a task from one user to another by making changes in the master database this process gets considerably more complex.  One approach is described in detail in the section "Database per user pattern - moving data using document state".
+<start-comment-marker>If you are using the *database per user pattern* with a master database, and making the assumption that the backend administrator will allocate a task from one user to another by making changes in the master database this process gets considerably more complex.  One approach is described in detail in part 2 of the blog, "Database per user pattern / moving data using document state".
 
-The filtered replication pattern has similar complexity as the database per user pattern with a master database for moving documents between users.  One approach is described in detail in the section "Database per user - moving data using document state".<end-comment-marker>
+The *filtered replication pattern* has similar complexity as the database per user pattern with a master database for moving documents between users.  One approach is described in detail in part 2 of the blog, "Filtered replication pattern / moving data using document state".<end-comment-marker>
 
 [comment]: # (This seems like a long-winded redirect to another section.)
 
