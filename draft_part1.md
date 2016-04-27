@@ -35,15 +35,13 @@ The database per user pattern allows you to create a unique database on Cloudant
 
 <start-comment-marker>In the filtered replication pattern, each user has access to a shared database on Cloudant and can access all data in that database<end-comment-marker>.  If more granular access control is required, a custom proxy service will need to be implemented that intercepts all calls to Cloudant and performs custom authorisation.
 
-[comment]: <> (Consider being more explicit – even if only data relevant to each user is sync’d to a device, they will require read and write permissions across the whole database for the sync to work.)
+[comment]: # (Consider being more explicit – even if only data relevant to each user is sync’d to a device, they will require read and write permissions across the whole database for the sync to work.)
 
 ## Number of active users
 
 Each active database [see Definition of 'active database'] on Cloudant will have multiple processes to manage the activity for that database.  A lot of active databases will eventually starve the Cloudant <start-comment-marker>cluster<end-comment-marker> of resources.  Exactly how many will depend on factors such as the size of your cluster and the other workloads being served by your cluster.  As a rule of thumb, more than a few hundred active databases may result in too much load on your cluster.
 
-[comment]: <> (
-Worth considering how this might be phrased when customers don’t have a cluster to themselves e.g. MT or cloud consumption model.
-)
+[comment]: # (Worth considering how this might be phrased when customers don’t have a cluster to themselves e.g. MT or cloud consumption model.)
 
 | Definition of 'active database'     | 
 | ------------- |
